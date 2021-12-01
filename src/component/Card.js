@@ -5,9 +5,6 @@ function Card({id, img, isClicked, onClickCard}) {
     return (
         <div className="card" onClick={() => onClickCard(myID)}>
             <img src={img} alt="random pic"/>
-            <label>img name</label>
-            <p>{isClicked.toString()}</p>
-            <label>{myID}</label>
         </div>
     )
 }

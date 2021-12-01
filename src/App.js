@@ -10,10 +10,6 @@ function App() {
   const [cards, setCards] = useState([]);
   const [imgArr] = useState(getImages());
 
-  // if (cards.length < 1) {
-  //   _randomFillCard(10);
-  // }
-
   useEffect(() => {
     const cardArr = []
     for (let i = 0; i < 10; i++) {
@@ -40,7 +36,7 @@ function App() {
               setBestScore(score + 1);
         } else {
           setScore(0);
-          _resetGame();
+          _randomFillCard(10);
         }
       }
     })
@@ -59,10 +55,6 @@ function App() {
     setCards(cardArr);
   }
 
-  function _resetGame() {
-    _randomFillCard(10);
-  }
-
   function _shuffleArray(targetArr) {
     const tempArr = [...targetArr];
     for (let i = tempArr.length - 1; i > -1; i--) {
@@ -74,25 +66,28 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Memory Card</h1>
       <div className="score">
-        <p>current score{score}</p>
-        <p>best score{bestScore}</p>
+        <div>current score: {score}</div>
+        <div>best score: {bestScore}</div>
       </div>
-      <div className="cards">
-        {
-          cards.map(card => {
-            return (
-              <li key={card.id}>
-                <Card 
-                  id = {card.id}
-                  img = {card.img}
-                  isClicked = {card.clicked}
-                  onClickCard = {onClickCard}
-                />
-              </li>
-            )
-          })
-        }
+      <div className="card_div">
+        <ul className="cards">
+          {
+            cards.map(card => {
+              return (
+                <li key={card.id}>
+                  <Card 
+                    id = {card.id}
+                    img = {card.img}
+                    isClicked = {card.clicked}
+                    onClickCard = {onClickCard}
+                  />
+                </li>
+              )
+            })
+          }
+        </ul>
       </div>
     </div>
   );

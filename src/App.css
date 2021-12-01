@@ -1,10 +1,42 @@
+body {
+    background: cornsilk;
+}
+
+h1 {
+    text-align: center;
+}
+
 li {
     list-style: none;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score {
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    border: teal solid;
+    padding: 10px;
+    background-color: rgb(60, 170, 170);
+    font-size: larger;
+}
+
+.card_div {
+    display: flex;
+    justify-content: center;
 }
 
 .cards {
     display: flex;
     flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
 }
 
 .card {
@@ -12,7 +44,6 @@ li {
     margin: 10px;
     padding: 5px;
     cursor: pointer;
-    width: 250px;
 }
 
 img {
@@ -20,7 +51,4 @@ img {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    /* background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
