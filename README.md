@@ -13,6 +13,7 @@ https://www.pexels.com/photo/panda-bear-on-green-grass-3608263/
 https://www.pexels.com/photo/selective-focus-photography-of-two-penguins-689784/
 https://www.pexels.com/photo/blue-and-green-peacock-638738/
 https://www.pexels.com/photo/white-goat-leaning-on-fence-3193155/
+https://www.pexels.com/photo/close-up-photography-of-tiger-792381/
 
 # Getting Started with Create React App
 

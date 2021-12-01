@@ -1,16 +1,34 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import uniqid from "uniqid";
 import Card from "./component/Card";
 import "./App.css";
+import getImages from "./getImages";
 
 function App() {
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [cards, setCards] = useState([]);
+  const [imgArr] = useState(getImages());
 
-  if (cards.length < 1) {
-    _randomFillCard(10);
-  }
+  // if (cards.length < 1) {
+  //   _randomFillCard(10);
+  // }
+
+  useEffect(() => {
+    const cardArr = []
+    for (let i = 0; i < 10; i++) {
+      cardArr.push({
+        id: uniqid(),
+        clicked: false,
+        img: imgArr[i]
+      });
+    }
+    for (let i = cardArr.length - 1; i > -1; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [cardArr[i], cardArr[j]] = [cardArr[j], cardArr[i]];
+    }
+    setCards(cardArr);
+  }, []);
 
   const onClickCard = (cardID) => {
     cards.forEach(card => {
@@ -26,15 +44,16 @@ function App() {
         }
       }
     })
-    _shuffleArray();
+    setCards(prevCards => _shuffleArray(prevCards));
   };
 
   function _randomFillCard(amount) {
-    let cardArr = []
+    const cardArr = []
     for (let i = 0; i < amount; i++) {
       cardArr.push({
         id: uniqid(),
-        clicked: false
+        clicked: false,
+        img: imgArr[i]
       });
     }
     setCards(cardArr);
@@ -44,13 +63,13 @@ function App() {
     _randomFillCard(10);
   }
 
-  function _shuffleArray() {
-    const tempArr = [...cards];
+  function _shuffleArray(targetArr) {
+    const tempArr = [...targetArr];
     for (let i = tempArr.length - 1; i > -1; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [tempArr[i], tempArr[j]] = [tempArr[j], tempArr[i]];
     }
-    setCards(tempArr);
+    return tempArr;
   }
 
   return (
@@ -66,6 +85,8 @@ function App() {
               <li key={card.id}>
                 <Card 
                   id = {card.id}
+                  img = {card.img}
+                  isClicked = {card.clicked}
                   onClickCard = {onClickCard}
                 />
               </li>

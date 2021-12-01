@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 
-function Card({id, onClickCard}) {
+function Card({id, img, isClicked, onClickCard}) {
     const [myID] = useState(id);
-
     return (
         <div className="card" onClick={() => onClickCard(myID)}>
-            <p>img</p>
+            <img src={img} alt="random pic"/>
             <label>img name</label>
+            <p>{isClicked.toString()}</p>
             <label>{myID}</label>
         </div>
     )
