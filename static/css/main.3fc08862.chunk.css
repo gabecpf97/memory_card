@@ -1,0 +1,2 @@
+body{background:#fff8dc}h1{text-align:center}li{list-style:none}.App{flex-direction:column;justify-content:center;align-items:center}.App,.score{display:flex}.score{width:400px;justify-content:space-evenly;border:solid teal;padding:10px;background-color:#3caaaa;font-size:larger}.card_div{display:flex;justify-content:center}.cards{display:flex;flex-wrap:wrap;margin:0;padding:0}.card{border:solid #000;margin:10px;padding:5px;cursor:pointer}img{display:block;width:200px;height:200px;object-fit:cover}
+/*# sourceMappingURL=main.3fc08862.chunk.css.map */
