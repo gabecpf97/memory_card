@@ -1,0 +1,16 @@
+li {
+    list-style: none;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: black solid;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+

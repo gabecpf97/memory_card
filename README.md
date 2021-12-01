@@ -2,6 +2,18 @@
 
 This game will see how much time you can click a new card that hasn't been clicked before and kwwp track of the score
 
+## image source
+https://www.pexels.com/photo/koala-bears-on-a-tree-trunk-146083/
+https://www.pexels.com/photo/white-rabbit-wearing-yellow-eyeglasses-4588065/
+https://www.pexels.com/photo/photo-of-elephants-on-grass-3551498/
+https://www.pexels.com/photo/yellow-animal-eyes-fur-41315/
+https://www.pexels.com/photo/red-chameleon-567540/
+https://www.pexels.com/photo/monkeys-sitting-on-rock-3493730/
+https://www.pexels.com/photo/panda-bear-on-green-grass-3608263/
+https://www.pexels.com/photo/selective-focus-photography-of-two-penguins-689784/
+https://www.pexels.com/photo/blue-and-green-peacock-638738/
+https://www.pexels.com/photo/white-goat-leaning-on-fence-3193155/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
